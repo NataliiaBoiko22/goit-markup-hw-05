@@ -54,12 +54,6 @@ img {
   display: block;
 }
 
-*:hover,
-:focus {
-  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-}
 /* TODO header */
 
 .header {
@@ -102,6 +96,7 @@ img {
   color: var(--dark-grey-color);
   padding: 32px 0;
   position: relative;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .nav-li::after {
   content: "";
@@ -116,8 +111,7 @@ img {
   transform: scaleX(0);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.active::after,
-.nav-li:hover::after {
+.active::after {
   transform: scaleX(1);
 }
 .auth-nav {
@@ -139,6 +133,7 @@ img {
   letter-spacing: 0.02em;
   color: var(--light-grey-color);
   padding: 32px 0;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .active,
 .nav-li:hover,
@@ -150,6 +145,7 @@ img {
 
 .auth-nav-icon {
   fill: var(--light-grey-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .auth-nav-item:hover .auth-nav-icon,
 .auth-nav-item:focus .auth-nav-icon {
@@ -190,7 +186,7 @@ img {
 
 .btn-primary {
   padding: 10px 22px;
-  background: var(--blue-color);
+  background-color: var(--blue-color);
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
   font-weight: 700;
@@ -199,6 +195,7 @@ img {
   letter-spacing: 0.06em;
   color: var(--white-color);
   border: var(--background-h-f);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .btn-primary:hover,
 .btn-primary:focus {
@@ -333,10 +330,12 @@ h3 {
   height: 44px;
   border-radius: 50%;
   background-color: var(--background-section);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .social-list-icon {
   fill: var(--icons-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .social-list-item:hover,
 .social-list-item:focus {
@@ -358,10 +357,12 @@ h3 {
   border: 1px solid var(--icons-color);
   width: 170px;
   height: 92px;
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .klient-list-icon {
   fill: var(--icons-color);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .klient-list-icon-link:hover,
 .klient-list-icon-link:focus {
@@ -405,6 +406,7 @@ h3 {
   line-height: 1.71;
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .footer-nav-li:hover,
@@ -465,6 +467,7 @@ h3 {
   border: none;
   font-family: inherit;
   cursor: pointer;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 
 .btn_active,
@@ -484,6 +487,7 @@ h3 {
 }
 .portfolio_card {
   background: var(--white-color);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
 }
 .portfolio_card-img {
   position: relative;
